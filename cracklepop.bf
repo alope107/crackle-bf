@@ -45,3 +45,51 @@
     >>>>> # return to loop counter
     - # decrement loop counter
 ]
+
+
+
+
+
+>>>>>>++++++++++ # outer multiplier
+>>+>>+>>+>>+>>+>>+>>+>>+>>+>>+>>+ # 11 letters (including deadspace) in "Crackle Pop"
+[<<]>> #Return to multiplier
+[>>[++++++++++>>]<<[<<]>>-]
+
+### C ASCII 67 = 101 s 36 p 2
+>> 
+> ++++++[<------>-] #s 6*6
+<++ # add 2
+
+### r  ASCII 114 = 101 p 12 p 1
+>> 
+> ++++[<+++>-] # p 4*3
+<+ # p 1
+
+### a  ASCII 97 = 101 s 4
+>>----
+
+### c  ASCII 99 = 101 s 2
+>>--
+
+### k ASCII 107 = 101 p 6
+>>++++++
+
+### l ASCII 108 = 101 p 7
+>>+++++++
+
+### e ASCII 101 = 101
+>>
+
+### NULL ASCII 0 = 0
+>>[-]
+
+### P ASCII 80 = 101 s 20 s 1
+>>
+> +++++[<---->-]
+<-
+
+### o ASCII 111 = 101 p 10
+>>++++++++++
+
+### p ASCII 112 = 101 p 11
+>>+++++++++++
