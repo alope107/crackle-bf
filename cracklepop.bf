@@ -2,8 +2,14 @@
 
 ###############
 
->>>>> +++[<+++++++++++>-]
-++++++++++ # newline literal
+>>
+> ++++++[<++++++++>-] tens display
+>++++++[<++++++++>-] ones display
+++++++++++ tens coundown
+>++++++++++ ones countdown
+> rollover flag
+> buffer space
+>++++++++++ # newline literal
 >>>>> 
 +++++ # 5 counter
 >>>+++ # 3 counter
@@ -98,9 +104,20 @@
     > # Go back to Or flag
     [<-] #unset flag flag bit if or is set
     < [<] > # reposition to flag flag regardless of what happened before
+    ###
+    <<<<<+ # set rolover flag bit
+    <- decrement ones countdown
+    <<+ increment ones display
+    >>>>>>>> # return to Or flag flag
+    # TODO handle full counting
+    ###
     [ # IF NOR
-        - # Unset flag
-        <<<<.>>>> # Print an exclamation (later to be number printing)
+        - # Unset flag flag
+        <<<<<<<<
+        . print ones display
+        >>>>>>>>
+        # TODO handle full printing
+        
     ]
     >[-] #reset OR
     <<<<.>>>> # print newline
