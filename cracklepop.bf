@@ -10,12 +10,17 @@
 > rollover flag
 > buffer space
 >++++++++++ # newline literal
->>>>> 
-+++++ # 5 counter
->>>+++ # 3 counter
->++++++++++++++++++++++++++++++ # Outer loop counter
+>Blank
+>Blank
+>OR flag flag
+> OR
+> +++++ # 5 counter
+> 5 flag
+> 3 flag
+>+++ # 3 counter
+>>++++++++++[<++++++++++>-] # Outer loop counter of 100
 
->>>
+>>
 
 ++++++++++ # outer multiplier
 >>+>>+>>+>>+>>+>>+>>+>>+>>+>>+>>+ # 11 letters (including deadspace) in "Crackle Pop"
