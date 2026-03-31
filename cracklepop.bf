@@ -2,55 +2,16 @@
 
 ###############
 
->>>>>>>> # Extra space to be used later if needed
+>>>>> +++[<+++++++++++>-]
+++++++++++ # newline literal
+>>>>> 
 +++++ # 5 counter
 >>>+++ # 3 counter
->++++++++++++++++++++++++++++ # Outer loop counter
->++++++[>+++++++++++>+++++++++++>+++++++++++<<<-]>+>++ # Different letters
-<<< # return to out loop counter
-[
-    <- # decrement 3 counter
-    <+ # set flag bit
-    >  # go back to 3 counter
-    [<-] # unset flag bit if 3 counter is not 0
-    < [<] > # reposition to flag bit regardless of what happened before
-    [ # IF MOD 3
-        >+++ # Reset 3s counter
-        >>>>.<<<< # Print a letter (later to be Crackle)
-        <-   # Unset flag
-        <<<+>>> #set OR flag
-    ] 
-    <<- #decrement 5 counter
-    >+ # set flag bit
-    < # go back to 5 counter
-    [>-] #unset flag bit if 5 counter is not 0
-    > [>] < # reposition to flag bit regardless of what happened before
-    [ # IF MOD 5
-        <+++++ #Reset 5s counter
-        <+> # Set or flag
-        >>>>>>.<<<<<< # Print a different letter (later to be Pop)
-        #TODO: Set OR flag
-        >- # Unset flag
-    ]
-    << # Go to OR flag 
-    <+ # set flag flag bit
-    > # Go back to Or flag
-    [<-] #unset flag flag bit if or is set
-    < [<] > # reposition to flag flag regardless of what happened before
-    [ # IF NOR
-        - # Unset flag
-        >>>>>>>>>>.<<<<<<<<<< # Print a different different letter (later to be number printing)
-    ]
-    >[-] #reset OR
-    >>>>> # return to loop counter
-    - # decrement loop counter
-]
+>++++++++++++++++++++++++++++++ # Outer loop counter
 
+>>>
 
-
-
-
->>>>>>++++++++++ # outer multiplier
+++++++++++ # outer multiplier
 >>+>>+>>+>>+>>+>>+>>+>>+>>+>>+>>+ # 11 letters (including deadspace) in "Crackle Pop"
 [<<]>> #Return to multiplier
 [>>[++++++++++>>]<<[<<]>>-]
@@ -93,3 +54,60 @@
 
 ### p ASCII 112 = 101 p 11
 >>+++++++++++
+
+[<<] # Back to deadspace
+<< # move past deadspace
+[<<] # 2 spaces before C
+
+<<< # return to out loop counter
+[
+    <- # decrement 3 counter
+    <+ # set mod 3 flag bit
+    >  # go back to 3 counter
+    [<-] # unset mod 3 flag bit if 3 counter is not 0
+    < [<] > # reposition to flag bit regardless of what happened before
+    [ # IF MOD 3
+        >+++ # Reset 3s counter
+        >>>>>> # Get to to Crackle data
+        [.>>] # Print Crackle
+        <<[<<] # 2 before Crackle
+        <<<<< # Return to mod 3 flag
+        -   # Unset mod 3 flag
+        <<<+>>> #set OR flag
+    ] 
+    <<- #decrement 5 counter
+    >+ # set flag bit
+    < # go back to 5 counter
+    [>-] #unset flag bit if 5 counter is not 0
+    > [>] < # reposition to flag bit regardless of what happened before
+    [ # IF MOD 5
+        <+++++ #Reset 5s counter
+        <+ # Set or flag
+        >>>>>>>>>> # Get to C
+        [>>] # Skip Crackle
+        >> # Get to Pop
+        [.>>] # Print Pop
+        << # Return to p
+        [<<] # Return to deadspace
+        <<[<<] # 2 past Crackle
+        <<<<<< # return to mod 5 flag
+        - # Unset flag
+    ]
+    << # Go to OR flag 
+    <+ # set flag flag bit
+    > # Go back to Or flag
+    [<-] #unset flag flag bit if or is set
+    < [<] > # reposition to flag flag regardless of what happened before
+    [ # IF NOR
+        - # Unset flag
+        <<<<.>>>> # Print an exclamation (later to be number printing)
+    ]
+    >[-] #reset OR
+    <<<<.>>>> # print newline
+    >>>>> # return to loop counter
+    - # decrement loop counter
+]
+
+
+
+
